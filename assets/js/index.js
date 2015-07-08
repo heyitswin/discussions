@@ -14,13 +14,13 @@
       var message = messageField.val();
 
       //SAVE DATA TO FIREBASE AND EMPTY FIELD
-      messagesRef.push({name:username, text:message});
+      messagesRef.push({text:message});
       messageField.val('');
     }
   });
 
   // Add a callback that is triggered for each chat message.
-  messagesRef.limitToLast(10).on('child_added', function (snapshot) {
+  messagesRef.limitToLast(100).on('child_added', function (snapshot) {
     //GET DATA
     var data = snapshot.val();
     var username = data.name || "";

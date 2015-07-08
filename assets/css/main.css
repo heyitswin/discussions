@@ -490,20 +490,20 @@ th {
   padding: 0; }
 
 header {
-  position: absolute;
-  bottom: 20px;
-  right: 50px; }
+  background-color: #eaeaea; }
 
 input {
   width: 100%;
   border: none;
-  padding: 25px 50px; }
+  padding: 25px 50px;
+  transition: 0.25s all cubic-bezier(0.05, 0.77, 0.71, 0.85); }
 
 input, textarea::-webkit-input-placeholder {
   font-family: 'Cardo', 'Georgia', serif;
   font-size: 60px;
   color: #000;
-  font-weight: 300; }
+  font-weight: 300;
+  background-color: #f8f8f8; }
 
 input::-webkit-input-placeholder {
   color: #000; }
@@ -517,30 +517,40 @@ button:focus {
   color: #fff; }
 
 ul {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+ul > li {
+  -moz-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg); }
+
+ul {
   list-style-type: none;
   margin: 0;
-  padding: 0 50px;
-  position: absolute;
-  bottom: 152px; }
+  padding: 40px 50px; }
 
 li {
   font-family: 'Cardo', 'Georgia', serif;
   font-weight: 300;
-  font-size: 60px; }
+  font-size: 60px;
+  word-wrap: break-word; }
 
 p {
   font-family: 'Cardo', 'Georgia', serif;
   font-weight: 300;
-  font-size: 14px; }
+  font-size: 14px;
+  padding: 20px 50px;
+  margin: 0; }
 
-.username {
-  display: none; }
+.t--right {
+  text-align: right; }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  background: #fff;
-  border-top: 1px solid #000;
-  width: 380px; }
+.f--left {
+  float: left; }
+
+.f--right {
+  float: right; }
 
 /*# sourceMappingURL=main.css.map */

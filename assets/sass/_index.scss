@@ -1,13 +1,12 @@
 header {
-    position: absolute;
-    bottom: 20px;
-    right: 50px;
+    background-color: #eaeaea;
 }
 
 input {
     width: 100%;
     border: none;
     padding: 25px 50px;
+    transition: .25s all cubic-bezier(.05,.77,.71,.85);
 }
 
 input, textarea::-webkit-input-placeholder {
@@ -15,6 +14,7 @@ input, textarea::-webkit-input-placeholder {
     font-size: 60px;
     color: #000;
     font-weight: 300;
+    background-color: #f8f8f8;
 }
 
 input::-webkit-input-placeholder {
@@ -31,33 +31,37 @@ button:focus {
 }
 
 ul {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+ul > li {
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+ul {
     list-style-type: none;
     margin: 0;
-    padding: 0 50px;
-    position: absolute;
-    bottom: 152px;
+    padding: 40px 50px;
 }
 
 li {
     font-family: 'Cardo', 'Georgia', serif;
     font-weight: 300;
     font-size: 60px;
+    word-wrap: break-word;
 }
 
 p {
     font-family: 'Cardo', 'Georgia', serif;
     font-weight: 300;
     font-size: 14px;
+    padding: 20px 50px;
+    margin: 0;
 }
 
-.username {
-    display: none;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    background: #fff;
-    border-top: 1px solid #000;
-    width: 380px;
-}
+.t--right { text-align: right; }
+.f--left { float: left; }
+.f--right { float: right; }
